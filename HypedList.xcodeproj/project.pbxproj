@@ -14,6 +14,7 @@
 		21DB1FC325FBC3CC004E8673 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FC225FBC3CC004E8673 /* UpcomingView.swift */; };
 		21DB1FC625FBDDE7004E8673 /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FC525FBDDE7004E8673 /* CreateHypedEventView.swift */; };
 		21DB1FC925FBDE29004E8673 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FC825FBDE29004E8673 /* HypedEvent.swift */; };
+		21DB1FCD25FBE5DB004E8673 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FCC25FBE5DB004E8673 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		21DB1FC225FBC3CC004E8673 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
 		21DB1FC525FBDDE7004E8673 /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
 		21DB1FC825FBDE29004E8673 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
+		21DB1FCC25FBE5DB004E8673 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				21DB1FB025FBC233004E8673 /* HypedListTabView.swift */,
 				21DB1FC225FBC3CC004E8673 /* UpcomingView.swift */,
 				21DB1FC525FBDDE7004E8673 /* CreateHypedEventView.swift */,
+				21DB1FCC25FBE5DB004E8673 /* ImagePicker.swift */,
 				21DB1FC825FBDE29004E8673 /* HypedEvent.swift */,
 				21DB1FB225FBC234004E8673 /* Assets.xcassets */,
 				21DB1FB725FBC234004E8673 /* Info.plist */,
@@ -150,6 +153,7 @@
 				21DB1FC625FBDDE7004E8673 /* CreateHypedEventView.swift in Sources */,
 				21DB1FC925FBDE29004E8673 /* HypedEvent.swift in Sources */,
 				21DB1FB125FBC233004E8673 /* HypedListTabView.swift in Sources */,
+				21DB1FCD25FBE5DB004E8673 /* ImagePicker.swift in Sources */,
 				21DB1FAF25FBC233004E8673 /* HypedListApp.swift in Sources */,
 				21DB1FC325FBC3CC004E8673 /* UpcomingView.swift in Sources */,
 			);
