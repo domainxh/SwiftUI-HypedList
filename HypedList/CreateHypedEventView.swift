@@ -30,12 +30,38 @@ struct CreateHypedEventView: View {
                 }
             }
             
-            Button(action: {
-                showImagePicker = true
-            }, label: {
-                Text("Pick Image")
-            }).sheet(isPresented: $showImagePicker) {
-                ImagePicker()
+            Section {
+                if let image = hypedEvent.image() {
+                    HStack {
+                        FormLabelView(title: "Image", color: .purple, iconSystemName: "camera")
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            hypedEvent.imageData = nil
+                        }, label: {
+                            Text("Remove Image")
+                                .foregroundColor(.red)
+                        })
+                    }
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    HStack {
+                        FormLabelView(title: "Image", color: .purple, iconSystemName: "camera")
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showImagePicker = true
+                        }, label: {
+                            Text("Pick Image")
+                        }).sheet(isPresented: $showImagePicker) {
+                            ImagePicker(imageData: $hypedEvent.imageData)
+                        }
+                    }
+                }
             }
             
             Section {

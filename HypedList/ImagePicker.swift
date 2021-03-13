@@ -10,6 +10,9 @@ import UIKit
 
 struct ImagePicker: UIViewControllerRepresentable {
     
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var imageData: Data?
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -20,9 +23,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         return imagePicker
     }
 
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         let parent: ImagePicker
@@ -33,8 +34,10 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[.originalImage] as? UIImage {
-                image.pngData()
+                parent.imageData = image.pngData()
             }
+            
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
