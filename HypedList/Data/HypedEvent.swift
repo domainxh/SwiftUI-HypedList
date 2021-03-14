@@ -11,12 +11,11 @@ import SwiftDate
 import UIColor_Hex_Swift
 
 class HypedEvent: ObservableObject, Identifiable, Codable {
-    
-    var id = UUID().uuidString
-    var date = Date() + 8.days
-    var title = ""
-    var url = ""
-    var color = Color.purple
+    @Published var id = UUID().uuidString
+    @Published var date = Date()
+    @Published var title = ""
+    @Published var url = ""
+    @Published var color = Color.purple
     @Published var imageData: Data?
     
     enum CodingKeys: String, CodingKey {
@@ -27,7 +26,7 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
         case color
         case imageData
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: CodingKeys.id)
@@ -49,11 +48,26 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
         imageData = try? values.decode(Data.self, forKey: .imageData)
     }
     
-    init() {}
+    init() {
+    }
+    
+    var hasBeenAdded: Bool {
+        let hypedEvent = DataController.shared.hypedEvents.first { (hypedEvent) -> Bool in
+            return hypedEvent.id == self.id
+        }
+        if hypedEvent != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     func image() -> Image? {
-        if let data = imageData, let uiImage = UIImage(data: data) {
-            return Image(uiImage: uiImage)
+        if let data = imageData {
+            if let uiImage = UIImage(data: data) {
+                return Image(uiImage: uiImage)
+            }
         }
         return nil
     }
@@ -69,7 +83,11 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
     }
     
     func timeFromNow() -> String {
-        date.toRelative()
+        return date.toRelative()
+    }
+    
+    func validURL() -> URL? {
+        return URL(string: url)
     }
 }
 
@@ -101,15 +119,3 @@ var testHypedEvent2: HypedEvent {
     return hypedEvent
 }
 
-
-
-//[
-//  {
-//    "id": "123",
-//    "date": "2020-11-13",
-//    "title": "Handheld mario game and watch",
-//    "url": "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
-//    "color": "FF0000",
-//    "imageURL": "https://techcrunch.com/wp-content/uploads/2018/02/img_9267.jpg?w=990&crop=1"
-//  }
-//]

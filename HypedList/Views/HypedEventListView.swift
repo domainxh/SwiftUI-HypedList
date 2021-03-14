@@ -11,6 +11,7 @@ struct HypedEventListView: View {
     
     var hypedEvents: [HypedEvent]
     var noEventsText: String
+    var isDiscover = false
     
     var body: some View {
         ScrollView {
@@ -20,10 +21,14 @@ struct HypedEventListView: View {
                         .bold()
                         .multilineTextAlignment(.center)
                         .padding(.top, 50)
-                        .padding(.horizontal, 10)
+                        .padding(.horizontal, 20)
                 } else {
-                    ForEach(hypedEvents, id: \.id) { event in
-                        HypedEventTileView(hypedEvent: event)
+                    ForEach(hypedEvents) { hypedEvent in
+                        NavigationLink(
+                            destination: HypedEventDetailView(hypedEvent: hypedEvent, isDiscover: isDiscover)) {
+                            HypedEventTileView(hypedEvent: hypedEvent)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
