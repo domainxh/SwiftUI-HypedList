@@ -93,7 +93,7 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
 
 var testHypedEvent1: HypedEvent {
     let hypedEvent = HypedEvent()
-    if let uiImage = UIImage(named: "pngImage"), let data = uiImage.pngData() {
+    if let uiImage = UIImage(named: "wwdc"), let data = uiImage.pngData() {
         hypedEvent.imageData = data
     }
     
@@ -107,7 +107,7 @@ var testHypedEvent1: HypedEvent {
 
 var testHypedEvent2: HypedEvent {
     let hypedEvent = HypedEvent()
-    if let uiImage = UIImage(named: "pngImage"), let data = uiImage.pngData() {
+    if let uiImage = UIImage(named: "wwdc"), let data = uiImage.pngData() {
         hypedEvent.imageData = data
     }
     

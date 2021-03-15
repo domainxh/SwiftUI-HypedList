@@ -8,6 +8,7 @@
 import Foundation
 import SwiftDate
 import SwiftUI
+import WidgetKit
 
 class DataController: ObservableObject {
     static var shared = DataController()
@@ -51,17 +52,20 @@ class DataController: ObservableObject {
     
     func saveData() {
         DispatchQueue.global().async {
+            guard let defaults = UserDefaults(suiteName: "group.com.hypedlist") else { return }
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(self.hypedEvents) {
-                UserDefaults.standard.setValue(encoded, forKey: "hypedEvents")
-                UserDefaults.standard.synchronize()
+                defaults.setValue(encoded, forKey: "hypedEvents")
+                defaults.synchronize()
+                WidgetCenter.shared.reloadAllTimelines()
             }
         }
     }
     
     func loadData() {
         DispatchQueue.global().async {
-            if let data = UserDefaults.standard.data(forKey: "hypedEvents") {
+            guard let defaults = UserDefaults(suiteName: "group.com.hypedlist") else { return }
+            if let data = defaults.data(forKey: "hypedEvents") {
                 let decoder = JSONDecoder()
                 if let jsonHypedEvents = try? decoder.decode([HypedEvent].self, from: data) {
                     DispatchQueue.main.async {
@@ -70,6 +74,17 @@ class DataController: ObservableObject {
                 }
             }
         }
+    }
+    
+    func getUpcomingForWidget() -> [HypedEvent] {
+        guard let defaults = UserDefaults(suiteName: "group.com.hypedlist") else { return [] }
+        if let data = defaults.data(forKey: "hypedEvents") {
+            let decoder = JSONDecoder()
+            if let jsonHypedEvents = try? decoder.decode([HypedEvent].self, from: data) {
+                return jsonHypedEvents
+            }
+        }
+        return []
     }
     
     func getDiscoverEvents() {
