@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		21284DB025FD651C00FC03B9 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 21284DAF25FD651C00FC03B9 /* UIColor_Hex_Swift */; };
 		2147FA9825FD699500FCF2C6 /* HypedEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147FA9725FD699500FCF2C6 /* HypedEventListView.swift */; };
+		2150F3E525FEB29100E48D79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150F3E425FEB29100E48D79 /* WidgetKit.framework */; };
+		2150F3E725FEB29100E48D79 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150F3E625FEB29100E48D79 /* SwiftUI.framework */; };
+		2150F3EA25FEB29100E48D79 /* HypedList_iOS_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2150F3E925FEB29100E48D79 /* HypedList_iOS_Widget.swift */; };
+		2150F3EC25FEB29200E48D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2150F3EB25FEB29200E48D79 /* Assets.xcassets */; };
+		2150F3F025FEB29200E48D79 /* HypedList-iOS-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2150F3E225FEB29100E48D79 /* HypedList-iOS-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2150F3F725FEB3FE00E48D79 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FC825FBDE29004E8673 /* HypedEvent.swift */; };
+		2150F3FA25FEB44E00E48D79 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A957E125FD5F40008AAC15 /* DataController.swift */; };
+		2150F3FE25FEB48300E48D79 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2150F3FD25FEB48300E48D79 /* SwiftDate */; };
+		2150F40025FEB48900E48D79 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 2150F3FF25FEB48900E48D79 /* UIColor_Hex_Swift */; };
 		216A4FAC25FD99420052D335 /* PastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A4FAB25FD99420052D335 /* PastView.swift */; };
 		216A4FAF25FDA7190052D335 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A4FAE25FDA7190052D335 /* DiscoverView.swift */; };
 		216A4FB325FDA95C0052D335 /* HypedEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A4FB225FDA95C0052D335 /* HypedEventDetailView.swift */; };
@@ -25,13 +34,43 @@
 		21DB1FD025FC534C004E8673 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB1FCF25FC534C004E8673 /* HypedEventTileView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2150F3EE25FEB29200E48D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21DB1FA325FBC233004E8673 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2150F3E125FEB29100E48D79;
+			remoteInfo = "HypedList-iOS-WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2150F3F425FEB29200E48D79 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2150F3F025FEB29200E48D79 /* HypedList-iOS-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2147FA9725FD699500FCF2C6 /* HypedEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventListView.swift; sourceTree = "<group>"; };
+		2150F3E225FEB29100E48D79 /* HypedList-iOS-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HypedList-iOS-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2150F3E425FEB29100E48D79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2150F3E625FEB29100E48D79 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2150F3E925FEB29100E48D79 /* HypedList_iOS_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedList_iOS_Widget.swift; sourceTree = "<group>"; };
+		2150F3EB25FEB29200E48D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2150F3ED25FEB29200E48D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		216A4FAB25FD99420052D335 /* PastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastView.swift; sourceTree = "<group>"; };
 		216A4FAE25FDA7190052D335 /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		216A4FB225FDA95C0052D335 /* HypedEventDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypedEventDetailView.swift; sourceTree = "<group>"; };
 		21A957E125FD5F40008AAC15 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		21DB1FAB25FBC233004E8673 /* HypedList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypedList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DB1FAB25FBC233004E8673 /* HypedList-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HypedList-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DB1FAE25FBC233004E8673 /* HypedListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedListApp.swift; sourceTree = "<group>"; };
 		21DB1FB025FBC233004E8673 /* HypedListTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedListTabView.swift; sourceTree = "<group>"; };
 		21DB1FB225FBC234004E8673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +84,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2150F3DF25FEB29100E48D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2150F3E725FEB29100E48D79 /* SwiftUI.framework in Frameworks */,
+				2150F3E525FEB29100E48D79 /* WidgetKit.framework in Frameworks */,
+				2150F40025FEB48900E48D79 /* UIColor_Hex_Swift in Frameworks */,
+				2150F3FE25FEB48300E48D79 /* SwiftDate in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21DB1FA825FBC233004E8673 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,10 +131,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2150F3E325FEB29100E48D79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2150F3E425FEB29100E48D79 /* WidgetKit.framework */,
+				2150F3E625FEB29100E48D79 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2150F3E825FEB29100E48D79 /* HypedList-iOS-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				2150F3E925FEB29100E48D79 /* HypedList_iOS_Widget.swift */,
+				2150F3EB25FEB29200E48D79 /* Assets.xcassets */,
+				2150F3ED25FEB29200E48D79 /* Info.plist */,
+			);
+			path = "HypedList-iOS-Widget";
+			sourceTree = "<group>";
+		};
 		21DB1FA225FBC233004E8673 = {
 			isa = PBXGroup;
 			children = (
 				21DB1FAD25FBC233004E8673 /* HypedList */,
+				2150F3E825FEB29100E48D79 /* HypedList-iOS-Widget */,
+				2150F3E325FEB29100E48D79 /* Frameworks */,
 				21DB1FAC25FBC233004E8673 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,7 +163,8 @@
 		21DB1FAC25FBC233004E8673 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21DB1FAB25FBC233004E8673 /* HypedList.app */,
+				21DB1FAB25FBC233004E8673 /* HypedList-iOS.app */,
+				2150F3E225FEB29100E48D79 /* HypedList-iOS-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,25 +194,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21DB1FAA25FBC233004E8673 /* HypedList */ = {
+		2150F3E125FEB29100E48D79 /* HypedList-iOS-WidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21DB1FBA25FBC234004E8673 /* Build configuration list for PBXNativeTarget "HypedList" */;
+			buildConfigurationList = 2150F3F125FEB29200E48D79 /* Build configuration list for PBXNativeTarget "HypedList-iOS-WidgetExtension" */;
 			buildPhases = (
-				21DB1FA725FBC233004E8673 /* Sources */,
-				21DB1FA825FBC233004E8673 /* Frameworks */,
-				21DB1FA925FBC233004E8673 /* Resources */,
+				2150F3DE25FEB29100E48D79 /* Sources */,
+				2150F3DF25FEB29100E48D79 /* Frameworks */,
+				2150F3E025FEB29100E48D79 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HypedList;
+			name = "HypedList-iOS-WidgetExtension";
+			packageProductDependencies = (
+				2150F3FD25FEB48300E48D79 /* SwiftDate */,
+				2150F3FF25FEB48900E48D79 /* UIColor_Hex_Swift */,
+			);
+			productName = "HypedList-iOS-WidgetExtension";
+			productReference = 2150F3E225FEB29100E48D79 /* HypedList-iOS-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		21DB1FAA25FBC233004E8673 /* HypedList-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DB1FBA25FBC234004E8673 /* Build configuration list for PBXNativeTarget "HypedList-iOS" */;
+			buildPhases = (
+				21DB1FA725FBC233004E8673 /* Sources */,
+				21DB1FA825FBC233004E8673 /* Frameworks */,
+				21DB1FA925FBC233004E8673 /* Resources */,
+				2150F3F425FEB29200E48D79 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2150F3EF25FEB29200E48D79 /* PBXTargetDependency */,
+			);
+			name = "HypedList-iOS";
 			packageProductDependencies = (
 				21A957DE25FD5405008AAC15 /* SwiftDate */,
 				21284DAF25FD651C00FC03B9 /* UIColor_Hex_Swift */,
 			);
 			productName = HypedList;
-			productReference = 21DB1FAB25FBC233004E8673 /* HypedList.app */;
+			productReference = 21DB1FAB25FBC233004E8673 /* HypedList-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,6 +247,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					2150F3E125FEB29100E48D79 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					21DB1FAA25FBC233004E8673 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -174,12 +272,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21DB1FAA25FBC233004E8673 /* HypedList */,
+				21DB1FAA25FBC233004E8673 /* HypedList-iOS */,
+				2150F3E125FEB29100E48D79 /* HypedList-iOS-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2150F3E025FEB29100E48D79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2150F3EC25FEB29200E48D79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21DB1FA925FBC233004E8673 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +299,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2150F3DE25FEB29100E48D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2150F3EA25FEB29100E48D79 /* HypedList_iOS_Widget.swift in Sources */,
+				2150F3FA25FEB44E00E48D79 /* DataController.swift in Sources */,
+				2150F3F725FEB3FE00E48D79 /* HypedEvent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21DB1FA725FBC233004E8673 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,7 +330,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2150F3EF25FEB29200E48D79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2150F3E125FEB29100E48D79 /* HypedList-iOS-WidgetExtension */;
+			targetProxy = 2150F3EE25FEB29200E48D79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2150F3F225FEB29200E48D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45E7KT68K8;
+				INFOPLIST_FILE = "HypedList-iOS-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "domainxh.HypedList.HypedList-iOS-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2150F3F325FEB29200E48D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45E7KT68K8;
+				INFOPLIST_FILE = "HypedList-iOS-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "domainxh.HypedList.HypedList-iOS-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		21DB1FB825FBC234004E8673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -333,6 +500,7 @@
 		21DB1FBB25FBC234004E8673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +523,7 @@
 		21DB1FBC25FBC234004E8673 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +546,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2150F3F125FEB29200E48D79 /* Build configuration list for PBXNativeTarget "HypedList-iOS-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2150F3F225FEB29200E48D79 /* Debug */,
+				2150F3F325FEB29200E48D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21DB1FA625FBC233004E8673 /* Build configuration list for PBXProject "HypedList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -386,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21DB1FBA25FBC234004E8673 /* Build configuration list for PBXNativeTarget "HypedList" */ = {
+		21DB1FBA25FBC234004E8673 /* Build configuration list for PBXNativeTarget "HypedList-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21DB1FBB25FBC234004E8673 /* Debug */,
@@ -418,6 +596,16 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		21284DAF25FD651C00FC03B9 /* UIColor_Hex_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21284DAE25FD651C00FC03B9 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColor_Hex_Swift;
+		};
+		2150F3FD25FEB48300E48D79 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21A957DD25FD5405008AAC15 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		2150F3FF25FEB48900E48D79 /* UIColor_Hex_Swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21284DAE25FD651C00FC03B9 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
 			productName = UIColor_Hex_Swift;
