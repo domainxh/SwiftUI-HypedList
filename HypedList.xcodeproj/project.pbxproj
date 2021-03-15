@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2119E5DF25FFB3E600E0C666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DB1FB225FBC234004E8673 /* Assets.xcassets */; };
+		2119E5E725FFEE6100E0C666 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119E5E625FFEE6100E0C666 /* MainView.swift */; };
+		2119E5EB25FFF00700E0C666 /* HypedListSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119E5EA25FFF00700E0C666 /* HypedListSidebarView.swift */; };
 		21284DB025FD651C00FC03B9 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 21284DAF25FD651C00FC03B9 /* UIColor_Hex_Swift */; };
 		2147FA9825FD699500FCF2C6 /* HypedEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147FA9725FD699500FCF2C6 /* HypedEventListView.swift */; };
 		2150F3E525FEB29100E48D79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2150F3E425FEB29100E48D79 /* WidgetKit.framework */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		2119E5E225FFDD0600E0C666 /* HypedList-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HypedList-iOS.entitlements"; sourceTree = "<group>"; };
 		2119E5E325FFDD7300E0C666 /* HypedList-iOS-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HypedList-iOS-WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		2119E5E625FFEE6100E0C666 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2119E5EA25FFF00700E0C666 /* HypedListSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedListSidebarView.swift; sourceTree = "<group>"; };
 		2147FA9725FD699500FCF2C6 /* HypedEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventListView.swift; sourceTree = "<group>"; };
 		2150F3E225FEB29100E48D79 /* HypedList-iOS-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HypedList-iOS-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2150F3E425FEB29100E48D79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -178,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				21DB1FAE25FBC233004E8673 /* HypedListApp.swift */,
+				2119E5E625FFEE6100E0C666 /* MainView.swift */,
+				2119E5EA25FFF00700E0C666 /* HypedListSidebarView.swift */,
 				21DB1FB025FBC233004E8673 /* HypedListTabView.swift */,
 				21284DAC25FD630000FC03B9 /* Views */,
 				21284DAB25FD62EE00FC03B9 /* Data */,
@@ -320,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21DB1FD025FC534C004E8673 /* HypedEventTileView.swift in Sources */,
+				2119E5E725FFEE6100E0C666 /* MainView.swift in Sources */,
 				21DB1FC625FBDDE7004E8673 /* CreateHypedEventView.swift in Sources */,
 				216A4FAF25FDA7190052D335 /* DiscoverView.swift in Sources */,
 				216A4FB325FDA95C0052D335 /* HypedEventDetailView.swift in Sources */,
@@ -330,6 +337,7 @@
 				21A957E225FD5F40008AAC15 /* DataController.swift in Sources */,
 				21DB1FAF25FBC233004E8673 /* HypedListApp.swift in Sources */,
 				21DB1FC325FBC3CC004E8673 /* UpcomingView.swift in Sources */,
+				2119E5EB25FFF00700E0C666 /* HypedListSidebarView.swift in Sources */,
 				2147FA9825FD699500FCF2C6 /* HypedEventListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
